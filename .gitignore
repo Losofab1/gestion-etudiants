@@ -1,0 +1,7 @@
+# Dépendances et fichiers système
+.DS_Store
+Thumbs.db
+*.log
+
+# Fichiers de configuration sensibles (ne jamais versionner)
+config.local.php

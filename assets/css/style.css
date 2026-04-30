@@ -1,0 +1,280 @@
+/* GESTION ÉTUDIANTS — Feuille de style globale */
+
+/* --- Reset & base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* --- En-tête --- */
+header {
+    background: #1a5276;
+    color: #fff;
+    padding: 18px 32px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* --- Contenu principal --- */
+main {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* --- Carte / section --- */
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px 28px;
+}
+
+.card h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a5276;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Formulaire --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: .8rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+input[type="text"],
+select {
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: .95rem;
+    font-family: inherit;
+    color: #222;
+    background: #fafafa;
+    transition: border-color .2s, box-shadow .2s;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #1a5276;
+    box-shadow: 0 0 0 3px rgba(26,82,118,.12);
+    background: #fff;
+}
+
+.field-error {
+    font-size: .78rem;
+    color: #c0392b;
+    min-height: 16px;
+    display: block;
+}
+
+/* --- Boutons --- */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    font-size: .88rem;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .15s, border-color .15s;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+}
+
+.btn-primary {
+    background: #1a5276;
+    color: #fff;
+    border-color: #1a5276;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #154360;
+    border-color: #154360;
+}
+
+.btn-edit {
+    background: #eafaf1;
+    color: #1e8449;
+    border-color: #a9dfbf;
+}
+
+.btn-edit:hover {
+    background: #d5f5e3;
+}
+
+.btn-danger {
+    background: #fdf2f2;
+    color: #c0392b;
+    border-color: #f5b7b1;
+}
+
+.btn-danger:hover {
+    background: #fadbd8;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+/* --- Tableau --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .92rem;
+}
+
+thead {
+    background: #eaf0fb;
+}
+
+th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: .78rem;
+    font-weight: 700;
+    color: #1a5276;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    border-bottom: 2px solid #d0dff0;
+}
+
+td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    color: #333;
+}
+
+tbody tr:hover {
+    background: #f8fbff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.td-num {
+    color: #aaa;
+    font-size: .82rem;
+    width: 36px;
+}
+
+.td-actions {
+    white-space: nowrap;
+}
+
+.td-actions .btn {
+    margin-right: 6px;
+    padding: 5px 12px;
+    font-size: .82rem;
+}
+
+.empty {
+    text-align: center;
+    padding: 28px;
+    color: #999;
+    font-style: italic;
+}
+
+/* --- Badge filière --- */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 600;
+    background: #d6eaf8;
+    color: #1a5276;
+}
+
+/* --- Messages flash --- */
+.alert {
+    padding: 11px 16px;
+    border-radius: 6px;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #eafaf1;
+    color: #1e8449;
+    border: 1px solid #a9dfbf;
+}
+
+.alert-danger {
+    background: #fdf2f2;
+    color: #c0392b;
+    border: 1px solid #f5b7b1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        margin: 16px auto;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        display: none;
+    }
+}
